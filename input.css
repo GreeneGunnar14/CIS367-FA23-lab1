@@ -1,4 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.transform-link {
+  position: relative;
+}
+
+.transform-link::after {
+  display: block;
+  position: relative;
+  content: "";
+
+  background-color: yellow;
+  width: 150px;
+  height: 10px;
+  left: calc(50% - 75px);
+  top: -12px;
+
+  opacity: 50%;
+
+  z-index: -1;
+
+  border-radius: 10px;
+}
+
+.stand-out-link::after {
+  display: block;
+  position: relative;
+  content: "";
+
+  background-color: hsl(7, 99%, 70%);
+  width: 150px;
+  height: 10px;
+  left: calc(50% - 75px);
+  top: -12px;
+
+  opacity: 30%;
+
+  z-index: -1;
+
+  border-radius: 10px;
+}
+
+#menu_corner {
+  height: 0px;
+  width: 0px;
+
+  border-right: 0px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 40px solid white;
+
+  position: absolute;
+
+  top: 4.5rem;
+  right: 2rem
+}
